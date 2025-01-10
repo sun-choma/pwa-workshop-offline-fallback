@@ -28,13 +28,13 @@ function App() {
       >
         <img src={pwaLogo} className="logo" alt="PWA logo" />
       </a>
-      <Text fontSize="5xl" as="h1">
+      <Text fontSize="5xl" as="h1" textAlign="center">
         PWA Workshop
       </Text>
       <Text fontSize="3xl" as="h2">
         Offline fallback
       </Text>
-      <VStack gap="4">
+      <VStack gap="4" w="full">
         <Text>
           This demo showcases common fallback handling pattern as well as
           on-demand caching. How does this mechanism work:
@@ -63,16 +63,22 @@ function App() {
             font and PWA logo won't be displayed as well
           </List.Item>
         </List.Root>
-        <HStack justifyContent="center">
+        <HStack justifyContent="center" w="full" flexWrap="wrap">
           <Button
             colorPalette="teal"
             onClick={addHtmlCache}
             loading={isLoading}
+            flexGrow={1}
           >
             <FileCode2Icon />
             Cache HTML and JS
           </Button>
-          <Button colorPalette="cyan" onClick={addCssCache} loading={isLoading}>
+          <Button
+            colorPalette="cyan"
+            onClick={addCssCache}
+            loading={isLoading}
+            flexGrow={1}
+          >
             <TablePropertiesIcon />
             Cache CSS
           </Button>
@@ -80,6 +86,7 @@ function App() {
             colorPalette="purple"
             onClick={addAllResourcesCache}
             loading={isLoading}
+            flexGrow={1}
           >
             <DatabaseIcon />
             Cache All Resources
@@ -89,6 +96,7 @@ function App() {
             variant="subtle"
             onClick={clearCache}
             loading={isLoading}
+            flexGrow={1}
           >
             <EraserIcon />
             Clear Cache
