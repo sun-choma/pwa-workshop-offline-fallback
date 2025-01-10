@@ -9,6 +9,7 @@ import {
 import { Alert } from "@/components/ui/alert.tsx";
 import { useCache } from "@/hooks/useCache.ts";
 import { Button } from "@/components/ui/button.tsx";
+import pwaLogo from "/pwa-logo.svg";
 
 function App() {
   const {
@@ -25,7 +26,7 @@ function App() {
         href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps"
         target="_blank"
       >
-        <img src="/pwa-logo.svg" className="logo" alt="PWA logo" />
+        <img src={pwaLogo} className="logo" alt="PWA logo" />
       </a>
       <Text fontSize="5xl" as="h1">
         PWA Workshop
